@@ -1,15 +1,5 @@
-https://repo1.dso.mil/ironbank-tools/grype-parser
-# Grype
-```
-curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
-grype dir:/tmp/iso-new/ -o json > /tmp/gdch_syscon.json
-dnf install -y python3
-pip3 install -r /tmp/requirements.txt
-python3 /tmp/grype-parser.py --filename=/tmp/gdch_syscon.json --excel-report=/tmp/logs/grype_"$(date +%Y.%m.%d_%H.%M.%S)".xlsx
-rm -rf /tmp/gdch_syscon.json
-```
-
 # Overview
+Code based on archived project from https://repo1.dso.mil/ironbank-tools/grype-parser.  This code has been updated to work on the Grype JSON schemas as of May 2023.
 
 Grype Parser is a tool designed to parse the output of [Anchore's Grype](https://github.com/anchore/grype) utility and provide an analysis of whether this application can proceed with hardening.
 
