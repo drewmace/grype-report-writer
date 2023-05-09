@@ -4,3 +4,5 @@ venv/
 *.log
 *.code-workspace
 .idea/
+*.xlsx
+rocky.json

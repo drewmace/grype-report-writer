@@ -101,6 +101,7 @@ def sanitize_data(data):
         vector = ''
         distro_type = ''
         distro_version = ''
+        matcher = ''
         links = ''
         cpes = ''
         purl = ''
@@ -110,14 +111,15 @@ def sanitize_data(data):
         artifact_location = ''
 
         # Load the appropriate cvss version information (prefer v3 over v2)
-        if '3.1' in m['vulnerability']['cvss']['version']:
-            cvss = 'cvssV3'
-            score = m['vulnerability']['cvss']['metrics']['baseScore']
-            vector = m['vulnerability']['cvss']['vector']
-        elif '2.0' in m['vulnerability']['cvss']['version']:
-            cvss = 'cvssV2'
-            score = m['vulnerability']['cvss']['metrics']['baseScore']
-            vector = m['vulnerability']['cvss']['vector']
+        for cvss_x in m['vulnerability']['cvss']:
+            if '3.1' in cvss_x['version']:
+                cvss = 'cvssV3.1'
+                score = cvss_x['metrics']['baseScore']
+                vector = cvss_x['vector']
+            elif '2.0' in cvss_x['version']:
+                cvss = 'cvssV2'
+                score = cvss_x['metrics']['baseScore']
+                vector = cvss_x['vector']
 
         # Get distribution information
         if 'distro' in m.keys():
@@ -160,6 +162,9 @@ def sanitize_data(data):
                 metadata_version = m['artifact']['metadata']['version']
                 metadata_installed = ', '.join(m['artifact']['metadata']['topLevelPackages'])
 
+        for match_detail in m['matchDetails']:
+            matcher = match_detail['matcher']
+
         # Construct a temporary dataframe
         temp = pd.DataFrame(
             dict(
@@ -169,13 +174,14 @@ def sanitize_data(data):
                 score=score,
                 vector=vector,
                 links=links,
-                matcher=m['matchDetails']['matcher'],
+                matcher=matcher,
                 distroType=distro_type,
                 distroVersion=distro_version,
                 artifactName=m['artifact']['name'],
                 artifactVersion=m['artifact']['version'],
                 artifactType=m['artifact']['type'],
-                artifactFoundBy=m['artifact']['foundBy'],
+                # artifactFoundBy=m['artifact']['foundBy'],
+                artifactFoundBy='',
                 artifactLocation=artifact_location,
                 cpes=', '.join(m['artifact']['cpes']),
                 purl=m['artifact']['purl'],
@@ -187,7 +193,7 @@ def sanitize_data(data):
         )
 
         # Append the temporary dataframe to the actual one
-        df = df.append(temp)
+        df = df._append(temp)
 
         # We use this as the index on the dataframe, so increment it
         count += 1
@@ -390,7 +396,7 @@ def validate_age_thresholds(df, filename):
             index=[i]
         )
 
-        adf = adf.append(temp_adf)
+        adf = adf._append(temp_adf)
 
     print(adf.to_string(index=False))
     print()
