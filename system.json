@@ -1,0 +1,440 @@
+{
+ "matches": [
+  {
+   "vulnerability": {
+    "id": "CVE-2021-3609",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-3609",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://bugzilla.redhat.com/show_bug.cgi?id=1971651",
+     "https://github.com/nrb547/kernel-exploitation/blob/main/cve-2021-3609/cve-2021-3609.md",
+     "https://github.com/torvalds/linux/commit/d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
+     "https://security.netapp.com/advisory/ntap-20220419-0004/",
+     "https://www.openwall.com/lists/oss-security/2021/06/19/1"
+    ],
+    "description": ".A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges. This race condition in net/can/bcm.c in the Linux kernel allows for local privilege escalation to root.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+      "metrics": {
+       "baseScore": 6.9,
+       "exploitabilityScore": 3.4,
+       "impactScore": 10
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 7,
+       "exploitabilityScore": 1,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "stock-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "vulnerabilityID": "CVE-2021-3609",
+      "versionConstraint": ">= 2.6.25, < 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "linux-kernel",
+    "version": "4.18.0-425.3.1.el8.x86_64",
+    "type": "linux-kernel",
+    "locations": [
+     {
+      "path": "images/pxeboot/vmlinuz"
+     }
+    ],
+    "language": "",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:linux-kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:generic/linux-kernel@4.18.0-425.3.1.el8.x86_64",
+    "upstreams": []
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2021-3609",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-3609",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://bugzilla.redhat.com/show_bug.cgi?id=1971651",
+     "https://github.com/nrb547/kernel-exploitation/blob/main/cve-2021-3609/cve-2021-3609.md",
+     "https://github.com/torvalds/linux/commit/d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
+     "https://security.netapp.com/advisory/ntap-20220419-0004/",
+     "https://www.openwall.com/lists/oss-security/2021/06/19/1"
+    ],
+    "description": ".A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges. This race condition in net/can/bcm.c in the Linux kernel allows for local privilege escalation to root.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+      "metrics": {
+       "baseScore": 6.9,
+       "exploitabilityScore": 3.4,
+       "impactScore": 10
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 7,
+       "exploitabilityScore": 1,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "stock-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "vulnerabilityID": "CVE-2021-3609",
+      "versionConstraint": ">= 2.6.25, < 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 || = 5.13 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "linux-kernel",
+    "version": "4.18.0-425.3.1.el8.x86_64",
+    "type": "linux-kernel",
+    "locations": [
+     {
+      "path": "isolinux/vmlinuz"
+     }
+    ],
+    "language": "",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:linux-kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:generic/linux-kernel@4.18.0-425.3.1.el8.x86_64",
+    "upstreams": []
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-1462",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-1462",
+    "namespace": "nvd:cpe",
+    "severity": "Medium",
+    "urls": [
+     "https://bugzilla.redhat.com/show_bug.cgi?id=2078466",
+     "https://lists.debian.org/debian-lts-announce/2022/10/msg00000.html",
+     "https://seclists.org/oss-sec/2022/q2/155"
+    ],
+    "description": "An out-of-bounds read flaw was found in the Linux kernel’s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:P",
+      "metrics": {
+       "baseScore": 3.3,
+       "exploitabilityScore": 3.4,
+       "impactScore": 4.9
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "metrics": {
+       "baseScore": 6.3,
+       "exploitabilityScore": 1,
+       "impactScore": 5.2
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "stock-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "vulnerabilityID": "CVE-2022-1462",
+      "versionConstraint": "none (unknown)",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:-:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "linux-kernel",
+    "version": "4.18.0-425.3.1.el8.x86_64",
+    "type": "linux-kernel",
+    "locations": [
+     {
+      "path": "isolinux/vmlinuz"
+     }
+    ],
+    "language": "",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:linux-kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:generic/linux-kernel@4.18.0-425.3.1.el8.x86_64",
+    "upstreams": []
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-1462",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-1462",
+    "namespace": "nvd:cpe",
+    "severity": "Medium",
+    "urls": [
+     "https://bugzilla.redhat.com/show_bug.cgi?id=2078466",
+     "https://lists.debian.org/debian-lts-announce/2022/10/msg00000.html",
+     "https://seclists.org/oss-sec/2022/q2/155"
+    ],
+    "description": "An out-of-bounds read flaw was found in the Linux kernel’s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:P",
+      "metrics": {
+       "baseScore": 3.3,
+       "exploitabilityScore": 3.4,
+       "impactScore": 4.9
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "metrics": {
+       "baseScore": 6.3,
+       "exploitabilityScore": 1,
+       "impactScore": 5.2
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "stock-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "vulnerabilityID": "CVE-2022-1462",
+      "versionConstraint": "none (unknown)",
+      "cpes": [
+       "cpe:2.3:a:linux:linux_kernel:-:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "linux-kernel",
+    "version": "4.18.0-425.3.1.el8.x86_64",
+    "type": "linux-kernel",
+    "locations": [
+     {
+      "path": "images/pxeboot/vmlinuz"
+     }
+    ],
+    "language": "",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:linux-kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_kernel:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux-kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux_kernel:4.18.0-425.3.1.el8.x86_64:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:generic/linux-kernel@4.18.0-425.3.1.el8.x86_64",
+    "upstreams": []
+   }
+  }
+ ],
+ "source": {
+  "type": "directory",
+  "target": "/tmp/iso-new/"
+ },
+ "distro": {
+  "name": "",
+  "version": "",
+  "idLike": null
+ },
+ "descriptor": {
+  "name": "grype",
+  "version": "0.61.1",
+  "configuration": {
+   "configPath": "",
+   "verbosity": 0,
+   "output": "json",
+   "file": "",
+   "distro": "",
+   "add-cpes-if-none": false,
+   "output-template-file": "",
+   "quiet": false,
+   "check-for-app-update": true,
+   "only-fixed": false,
+   "only-notfixed": false,
+   "platform": "",
+   "search": {
+    "scope": "Squashed",
+    "unindexed-archives": false,
+    "indexed-archives": true
+   },
+   "ignore": null,
+   "exclude": [],
+   "db": {
+    "cache-dir": "/root/.cache/grype/db",
+    "update-url": "https://toolbox-data.anchore.io/grype/databases/listing.json",
+    "ca-cert": "",
+    "auto-update": true,
+    "validate-by-hash-on-start": false,
+    "validate-age": true,
+    "max-allowed-built-age": 432000000000000
+   },
+   "externalSources": {
+    "enable": false,
+    "maven": {
+     "searchUpstreamBySha1": true,
+     "baseUrl": "https://search.maven.org/solrsearch/select"
+    }
+   },
+   "match": {
+    "java": {
+     "using-cpes": true
+    },
+    "dotnet": {
+     "using-cpes": true
+    },
+    "golang": {
+     "using-cpes": true
+    },
+    "javascript": {
+     "using-cpes": false
+    },
+    "python": {
+     "using-cpes": true
+    },
+    "ruby": {
+     "using-cpes": true
+    },
+    "stock": {
+     "using-cpes": true
+    }
+   },
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "fail-on-severity": "",
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "log": {
+    "structured": false,
+    "level": "warn",
+    "file": ""
+   },
+   "show-suppressed": false,
+   "by-cve": false,
+   "name": "",
+   "default-image-pull-source": ""
+  },
+  "db": {
+   "built": "2023-05-07T01:30:36Z",
+   "schemaVersion": 5,
+   "location": "/root/.cache/grype/db/5",
+   "checksum": "sha256:15ea7bc21a47461c5d1d999b3e62849e661d7a262ac8b1ba2eb8218840e0ec79",
+   "error": null
+  },
+  "timestamp": "2023-05-08T03:35:42.827615238Z"
+ }
+}

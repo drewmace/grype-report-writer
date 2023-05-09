@@ -1,0 +1,8 @@
+.DS_Store
+venv/
+.vscode/*
+*.log
+*.code-workspace
+.idea/
+*.xlsx
+rocky.json
