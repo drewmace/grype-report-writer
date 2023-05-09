@@ -348,7 +348,7 @@ def validate_age_thresholds(df, filename):
                         status = "Failed"
                         thresholds_exceeded += 1
             if 'high' in ageThresholds[i].keys():
-                if high > ageThresholds[i]['high'] and ageThresholds[i]['high'] != -1:
+                if high > ageThresholds[i]['high'] != -1:
                     status = "Failed"
                     thresholds_exceeded += 1
             if 'medium' in ageThresholds[i].keys():
@@ -357,7 +357,7 @@ def validate_age_thresholds(df, filename):
                         status = "Failed"
                         thresholds_exceeded += 1
             if 'low' in ageThresholds[i].keys():
-                if low > ageThresholds[i]['low'] and ageThresholds[i]['low'] != -1:
+                if low > ageThresholds[i]['low'] != -1:
                     status = "Failed"
                     thresholds_exceeded += 1
             if 'negligible' in ageThresholds[i].keys():
@@ -366,7 +366,7 @@ def validate_age_thresholds(df, filename):
                         status = "Failed"
                         thresholds_exceeded += 1
             if 'info' in ageThresholds[i].keys():
-                if info > ageThresholds[i]['info'] and ageThresholds[i]['info'] != -1:
+                if info > ageThresholds[i]['info'] != -1:
                     status = "Failed"
                     thresholds_exceeded += 1
         else:
@@ -471,7 +471,7 @@ def validate_age_thresholds(df, filename):
     chart.style = 18
 
     # Criticals
-    title = Reference(ws, min_col=2, min_row=2, max_col=2, max_row=2)
+    # title = Reference(ws, min_col=2, min_row=2, max_col=2, max_row=2)
     xvalues = Reference(ws, min_col=1, min_row=2, max_col=1, max_row=21)
     yvalues = Reference(ws, min_col=2, min_row=2, max_col=2, max_row=21)
     sizes = Reference(ws, min_col=2, min_row=2, max_col=2, max_row=21)
@@ -481,7 +481,7 @@ def validate_age_thresholds(df, filename):
     chart.series.append(series)
 
     # Highs
-    title = Reference(ws, min_col=3, min_row=2, max_col=3, max_row=2)
+    # title = Reference(ws, min_col=3, min_row=2, max_col=3, max_row=2)
     xvalues = Reference(ws, min_col=1, min_row=2, max_col=1, max_row=21)
     yvalues = Reference(ws, min_col=3, min_row=2, max_col=3, max_row=21)
     sizes = Reference(ws, min_col=3, min_row=2, max_col=3, max_row=21)
@@ -491,7 +491,7 @@ def validate_age_thresholds(df, filename):
     chart.series.append(series)
 
     # Mediums
-    title = Reference(ws, min_col=4, min_row=2, max_col=4, max_row=2)
+    # title = Reference(ws, min_col=4, min_row=2, max_col=4, max_row=2)
     xvalues = Reference(ws, min_col=1, min_row=2, max_col=1, max_row=21)
     yvalues = Reference(ws, min_col=4, min_row=2, max_col=4, max_row=21)
     sizes = Reference(ws, min_col=4, min_row=2, max_col=4, max_row=21)
@@ -519,7 +519,7 @@ def validate_age_thresholds(df, filename):
     wb._sheets = [
         wb._sheets[1],  # Summary
         wb._sheets[2],  # Vulnerabilities by age
-        wb._sheets[0]  # Findings
+        wb._sheets[0]   # Findings
     ]
 
     # Save the Excel document
@@ -593,22 +593,21 @@ def main(argv):
     filename = ""
     excel_filename = ""
 
-    usage = []
-    usage.append("grype-parser.py <args>")
-    usage.append("Argument              Description")
-    usage.append("  --filename          Location to the JSON file produced by Grype.")
-    usage.append("  --excel-report      Generate an Excel report at this location.")
-
     try:
         opts, args = getopt.getopt(argv, "h", ["filename=", "excel-report="])
     except getopt.GetoptError:
-        for i in usage:
-            print(i)
+        print("grype-parser.py <args>")
+        print("Argument              Description")
+        print("  --filename          Location to the JSON file produced by Grype.")
+        print("  --excel-report      Generate an Excel report at this location.")
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print(usage)
+            print("grype-parser.py <args>")
+            print("Argument              Description")
+            print("  --filename          Location to the JSON file produced by Grype.")
+            print("  --excel-report      Generate an Excel report at this location.")
             sys.exit()
         elif opt in "--filename":
             filename = arg
